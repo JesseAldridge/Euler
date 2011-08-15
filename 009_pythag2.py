@@ -19,13 +19,13 @@ def pythag_trip(total):
       # (a + b + c) / 2m == (m + n);  0 < n < m;  only one of {n,m} is even
       m_plus_n = m + 2 if m % 2 == 1 else m + 1
       while m_plus_n < 2 * m and m_plus_n <= total_over_2m:
-        if total_over_2m % k == 0 and gcd(k, m) == 1:
-          d = half_total / (k * m)
-          n = k - m
+        if total_over_2m % m_plus_n == 0 and gcd(m_plus_n, m) == 1:
+          d = half_total / (m_plus_n * m)
+          n = m_plus_n - m
           a = d * (m * m - n * n)
           b = 2 * d * m * n
           c = d * (m * m + n * n)
-          return a * b * c
-        k += 2
+          return a, b, c
+        m_plus_n += 2
 for i in range(1, 100):
   print i, pythag_trip(i)
