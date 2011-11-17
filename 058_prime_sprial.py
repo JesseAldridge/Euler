@@ -9,7 +9,6 @@ from pprint import pprint
 21 22 23 24 25
 '''
 
-# If have cache, use it.  Otherwise check evens then odds up to sqrt(n).
 def is_prime(n):
   if n <= 1:  return False
   if n == 2:  return True
