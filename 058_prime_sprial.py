@@ -18,7 +18,7 @@ def is_prime(n):
       return False
   return True
 
-# For each layer:  Move dist to find primes to non-prime ratio on diagonals.
+# For each layer:  Move dist to find prime to non-prime ratio on diagonals.
 dist = 2
 cell_count = 1
 prime_count = 0
