@@ -2,11 +2,13 @@
 import operator
 
 def prime_factors(n):
-  ' Recursively divide n by the smallest factor that divides it evenly. '
-  if n == 1:  return [1]
+  
+  # Recursively divide n by the smallest factor that divides it evenly.
+  
+  if n == 1:  
+    return [1]
   for i in range(2, int(n ** .5) + 1):
     if n % i == 0:
-      # If nothing less than i divides n evenly, i must be prime.
       return [i] + prime_factors(n / i)
   return [n, 1]
 
